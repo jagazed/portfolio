@@ -4,11 +4,13 @@ import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {SocialLinks} from "../../components/social/SocialLinks";
 
+
+const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo></Logo>
-            <Menu></Menu>
+            <Logo/>
+            <Menu menuItems={items}/>
             <SocialLinks></SocialLinks>
         </StyledHeader>
     );
