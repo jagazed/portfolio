@@ -12,7 +12,7 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
                     <Skill iconId={"iconJS"}
                            title={"JavaScript"}
                            description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}/>

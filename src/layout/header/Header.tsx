@@ -5,6 +5,7 @@ import {SocialLinks} from "../../components/social/SocialLinks";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {Button} from "../../components/Button";
 
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -15,7 +16,8 @@ export const Header = () => {
                 <FlexWrapper justify={"flex-end"} align={"center"}>
                     <Logo/>
                     <HeaderMenu menuItems={items}/>
-                    <SocialLinks></SocialLinks>
+                    {/*<SocialLinks></SocialLinks>*/}
+                    <Button>Contact Me</Button>
                 </FlexWrapper>
             </Container>
         </StyledHeader>

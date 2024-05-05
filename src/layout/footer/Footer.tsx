@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Logo} from "../../components/logo/Logo";
 import {SocialLinks} from "../../components/social/SocialLinks";
-import {Menu} from "../../components/menu/Menu";
+import {TabMenu} from "../sections/works/tabMenu/TabMenu";
 
 
 const itemsFooter = ["Home", "About", "Tech Stack", "Projects", "Contact"]
@@ -17,7 +17,7 @@ export const Footer = () => {
                 <SocialLinks/>
             </FlexWrapper>
             <FlexWrapper justify={"space-between"}>
-                <Menu menuItems={itemsFooter}/>
+                <TabMenu menuItems={itemsFooter}/>
                 <Copyright>© 2024 Vasiliy Zelyanko, All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>

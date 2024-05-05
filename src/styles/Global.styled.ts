@@ -23,6 +23,7 @@ export const GlobalStyled = createGlobalStyle`
     
     a {
         text-decoration: none;
+        color: ${theme.colors.link};
     }
     
     ul {
@@ -32,6 +33,8 @@ export const GlobalStyled = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color: ${theme.colors.link};
     }
     
     section {
@@ -46,4 +49,15 @@ export const GlobalStyled = createGlobalStyle`
         background-color: ${theme.colors.secondaryBg};
     }
     
+    h3 {
+        margin: 15px 0;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
 `
