@@ -5,6 +5,7 @@ import {SocialLinks} from "../../../components/social/SocialLinks";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import iconArrow from "../../../assets/images/arrow-icon.svg";
 
 export const Contacts = () => {
     return (
@@ -64,12 +65,26 @@ const StyledForm = styled.form`
     }
     
     button {
+        font-weight: 500;
+        font-size: 30px;
         width: 147px;
         height: 36px;
         padding: 0;
         background-color: unset;
         color: #676CDB;
         text-align: left;
+        position: relative;
+        margin: 20px 0 10px;
+        
+        &::after{
+            content: "";
+            background-image: url(${iconArrow});
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+        }
     }
 `
 

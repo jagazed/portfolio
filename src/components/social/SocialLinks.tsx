@@ -6,13 +6,19 @@ export const SocialLinks = () => {
     return (
         <StyledSocialLinks>
             <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconGithub'}/></SocialLink>
+                <SocialLink href=""><Icon iconId={'iconDribble'}/></SocialLink>
             </SociaItem>
             <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconTwitter'}/></SocialLink>
+                <SocialLink href=""><Icon iconId={'iconUpwork'}/></SocialLink>
+            </SociaItem>
+            <SociaItem>
+                <SocialLink href=""><Icon iconId={'iconYoutube'}/></SocialLink>
             </SociaItem>
             <SociaItem>
                 <SocialLink href=""><Icon iconId={'iconLinkedin'}/></SocialLink>
+            </SociaItem>
+            <SociaItem>
+                <SocialLink href=""><Icon iconId={'iconGithubSocialLink'}/></SocialLink>
             </SociaItem>
         </StyledSocialLinks>
     );
@@ -21,7 +27,8 @@ export const SocialLinks = () => {
 const StyledSocialLinks = styled.ul`
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 50px;
+    height: 25px;
 `
 
 const SociaItem = styled.li`
@@ -29,5 +36,4 @@ const SociaItem = styled.li`
 `
 
 const SocialLink = styled.a`
-
 `

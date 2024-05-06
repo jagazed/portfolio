@@ -4,7 +4,6 @@ import {theme} from "../../../../styles/Theme";
 import {Button} from "../../../../components/Button";
 import iconLink1 from "../../../../assets/images/akar-icons_link-chain.svg";
 import iconLink2 from "../../../../assets/images/akar-icons_github-fill.svg";
-import asd from "https://www.zefir.by/storage/app/media/uploaded-files/FFBB8B25-DAD0-42AE-9932-B74CB903D7E5.jpeg"
 
 
 type WorkPropsType = {
