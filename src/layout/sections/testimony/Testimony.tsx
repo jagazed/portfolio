@@ -9,7 +9,7 @@ export const Testimony = () => {
     return (
         <StyledTestimony>
             <SectionTitle>Testimony</SectionTitle>
-            <SectionText>comment about me</SectionText>
+            <SectionText>Comment about me</SectionText>
             <FlexWrapper direction={"column"} align={"center"}>
                 <Slider/>
             </FlexWrapper>
@@ -18,5 +18,5 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-    background-color: #59d597;
+    
 `

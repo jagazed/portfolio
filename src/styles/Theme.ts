@@ -8,6 +8,7 @@ export const theme = {
 
         font: "#D9D9D9",
         text: "#CCCCCC",
-        link: "#FFFFFF"
+        link: "#FFFFFF",
+        linkHover: "#676CDB"
     }
 }

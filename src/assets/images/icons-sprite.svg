@@ -67,11 +67,5 @@
         <path d="M61.3513 53.0615L59.9563 68.4534L47.03 71.9119V83.8714L70.79 77.3412L70.9663 75.4001L72.98 53.0615H61.3513Z" fill="white"/>
         <path d="M47.0411 18.7896V30.2842H19.0436L18.8111 27.6997L18.2824 21.8724L18.0049 18.7896H47.0411ZM46.9999 42.054V53.5487H34.2536L34.0211 50.9642L33.4961 45.1369L33.2186 42.054H46.9999Z" fill="#EBEBEB"/>
     </g>
-
-    <g id="arrow-right">
-        <path d="M5 15H25" stroke="#676CDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16.25 6.25L25 15L16.25 23.75" stroke="#000000" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"/>
-    </g>
     
 </svg>

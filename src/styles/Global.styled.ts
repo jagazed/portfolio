@@ -48,6 +48,10 @@ export const GlobalStyled = createGlobalStyle`
     section:nth-of-type(even) {
         background-color: ${theme.colors.secondaryBg};
     }
+
+    section:nth-child(6) {
+        background-color: ${theme.colors.sectionLine};
+    }
     
     h3 {
         margin: 15px 0;

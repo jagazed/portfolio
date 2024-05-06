@@ -9,4 +9,5 @@ export const Button = styled.button`
     height: 50px;
     padding: 10px 20px;
     background-color: #676CDB;
+    white-space: nowrap;
 `
