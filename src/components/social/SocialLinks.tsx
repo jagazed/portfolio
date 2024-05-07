@@ -36,4 +36,5 @@ const SociaItem = styled.li`
 `
 
 const SocialLink = styled.a`
+    display: flex;
 `

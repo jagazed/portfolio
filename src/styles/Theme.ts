@@ -3,6 +3,7 @@ export const theme = {
         primaryBg: "#222A36F2",
         secondaryBg: "#222A36",
         sectionLine: "#000000",
+        footerLine: "#42446E",
         workBg: "#363636",
         accent: "#A7A7A7",
 
