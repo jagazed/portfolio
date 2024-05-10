@@ -8,29 +8,21 @@ import {Button} from "../../../components/Button";
 export const MobileMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={true}>
-                <MobileMenuFrapper>
-                    <Logo/>
+            <MobileMenuPopup isOpen={false}>
+                <MobileFrapper>
+                    <span><Logo/></span>
                     <ul>
                         {props.menuItems.map((item, index) => {
                             return <ListItem key={index}>
-                                <Link href="">
-                                    {item}
-                                    <Mask>
-                                        <span>{item}</span>
-                                    </Mask>
-                                    <Mask>
-                                        <span>{item}</span>
-                                    </Mask>
-                                </Link>
+                                <Link href="">{item}</Link>
                             </ListItem>
                         })}
                     </ul>
                     <Button>Contact Me</Button>
-                </MobileMenuFrapper>
+                </MobileFrapper>
             </MobileMenuPopup>
         </StyledMobileMenu>
     );
@@ -75,9 +67,9 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
     width: 50px;
     height: 50px;
-    padding-left: 8px;
     top: 25px;
     right: 20px;
+    padding-left: 8px;
     z-index: 9999;
 
     span {
@@ -87,7 +79,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         background-color: ${theme.colors.link};
         border-radius: 20px;
         position: absolute;
-        top: 24px;
+        top: 23px;
 
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 250, 250, 0);
@@ -125,8 +117,8 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     }
 `
 
-const MobileMenuFrapper = styled.div`
-     a.Logo {
+const MobileFrapper = styled.div`
+     span a {
          position: fixed;
          display: block;
          width: 93px;
@@ -136,63 +128,14 @@ const MobileMenuFrapper = styled.div`
     }
 `
 
-
 const Link = styled.a`
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 130%;
     text-align: center;
-    color: transparent;
-`
-
-const Mask = styled.span`
-    position: absolute;
-    top:0;
-    left: 0;
-    display: inline-block;
-    height: 50%;
-    overflow: hidden;
-    color: ${theme.colors.text};
-    
-    & + & {
-        top: 50%;
-        span {
-            display: inline-block;
-            transform: translateY(-50%);
-        }
-    }
 `
 
 const ListItem = styled.li`
-    position: relative;
-    
-    &::before {
-        content: "";
-        display: inline-block;
-        height: 2px;
-        background-color: ${theme.colors.font};
-        
-        position: absolute;
-        top: 50%;
-        left: -8px;
-        right: -8px;
-        z-index: 1;
-        
-        transform: scale(0);
-    }
-    
-    &:hover {
-        &::before {
-            transform: scale(1);
-        }
-        
-        ${Mask} {
-            transform: skewX(6deg) translateX(1px);
-            
-            & + ${Mask} {
-                transform: skewX(6deg) translateX(-1px);
-            }
-        }
-    }
+
 `

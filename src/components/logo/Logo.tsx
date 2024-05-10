@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 export const Logo = () => {
     return (
-        <a className={"Logo"} href="#">
-            <img src={iconLogo} alt={"Logo"}/>
-        </a>
+            <a className={"Logo"} href="#">
+                <img src={iconLogo} alt={"Logo"}/>
+            </a>
     );
 };
 
