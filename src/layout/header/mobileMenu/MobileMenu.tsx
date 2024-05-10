@@ -8,11 +8,9 @@ import {Button} from "../../../components/Button";
 export const MobileMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMobileMenu>
-
             <BurgerButton isOpen={true}>
                 <span></span>
             </BurgerButton>
-
             <MobileMenuPopup isOpen={true}>
                 <MobileMenuFrapper>
                     <Logo/>
@@ -94,6 +92,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 250, 250, 0);
         `}
+        
         &::before {
             content: "";
             display: block;
@@ -127,10 +126,13 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `
 
 const MobileMenuFrapper = styled.div`
-    a.Logo {
-        position: fixed;
-        top: 50px;
-        left: 30px;
+     a.Logo {
+         position: fixed;
+         display: block;
+         width: 93px;
+         height: 65px;
+         top: 19px;
+         left: 20px;
     }
 `
 
