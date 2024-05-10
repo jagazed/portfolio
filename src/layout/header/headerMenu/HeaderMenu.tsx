@@ -35,6 +35,9 @@ const StyledHeaderMenu = styled.nav`
         justify-content: flex-end;
     }
     
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const Link = styled.a`
