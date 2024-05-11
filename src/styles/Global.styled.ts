@@ -42,15 +42,19 @@ export const GlobalStyled = createGlobalStyle`
         padding: 100px 0;
     }
     
+    section:nth-of-type(1){
+        padding: 0;
+    }
+    
     section:nth-of-type(odd) {
         background-color: ${theme.colors.primaryBg};
     }
-    
+
     section:nth-of-type(even) {
         background-color: ${theme.colors.secondaryBg};
     }
 
-    section:nth-child(6) {
+    section:nth-last-of-type(1) {
         background-color: ${theme.colors.sectionLine};
     }
     

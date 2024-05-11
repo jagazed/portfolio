@@ -14,7 +14,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify={"flex-end"} align={"center"}>
+                <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     <HeaderMenu menuItems={items}/>
                     <MobileMenu menuItems={items}/>
@@ -28,7 +28,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background: transparent;
     min-height: 67px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;

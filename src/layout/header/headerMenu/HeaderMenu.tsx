@@ -18,12 +18,12 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-    padding: 0 50px;
+    padding: 0 20px;
     flex: 1;
     ul {
         display: flex;
         gap: 30px;
-        justify-content: flex-end;
+        justify-content: center;
     }
     @media ${theme.media.tablet} {
         display: none;
