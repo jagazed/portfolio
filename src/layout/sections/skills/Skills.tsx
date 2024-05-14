@@ -5,6 +5,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {SectionText} from "../../../components/SectionText";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (

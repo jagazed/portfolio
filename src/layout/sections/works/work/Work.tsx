@@ -36,26 +36,49 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    max-width: 375px;
-    width: 100%;
-    margin-bottom: 65px;
+    width: 375px;
+    margin: 40px 0 25px;
     border-radius: 20px;
+
+    @media screen and (max-width: 783px) {
+        max-width: 475px;
+        width: 100%;
+        margin: 20px 0 20px;
+    }
 `
 
 const ImageWrapper = styled.div`
     position: relative;
+
+    ${Button} {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        border-radius: 20px 20px 0 0;
+        opacity: 0;
+    }
     
     &:hover {
         &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-            border-radius: 20px 20px 0 0;
+            opacity: 1;
         }
 
         ${Button} {
@@ -63,26 +86,32 @@ const ImageWrapper = styled.div`
         }
     }
     
-    ${Button} {
-        opacity: 0;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        
+    @media ${theme.media.tablet} {
         &::before {
-            width: 100%;
-            height: 100%;
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
         }
     }
-    
 `
 
 const Image = styled.img`
-    width: 375px;
+    max-width: 475px;
+    width: 100%;
     height: 260px;
+    //width: 375px;
+    //height: 260px;
     object-fit: cover;
+    object-position: center;
     border-radius: 20px 20px 0 0;
+
+    @media ${theme.media.mobile} {
+        //max-width: 375px;
+        //height: 260px;
+    }
+    
 `
 
 const DescriptionWork = styled.div`

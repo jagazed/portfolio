@@ -1,38 +1,25 @@
-import React from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {Logo} from "../../../components/logo/Logo";
 import {Button} from "../../../components/Button";
 
+const Link = styled.a`
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+`
 
-export const MobileMenu = (props: {menuItems: Array<string>}) => {
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
-                <MobileFrapper>
-                    <span><Logo/></span>
-                    <ul>
-                        {props.menuItems.map((item, index) => {
-                            return <ListItem key={index}>
-                                <Link href="">{item}</Link>
-                            </ListItem>
-                        })}
-                    </ul>
-                    <Button>Contact Me</Button>
-                </MobileFrapper>
-            </MobileMenuPopup>
-        </StyledMobileMenu>
-    );
-};
+const MenuItem = styled.li`
 
-const StyledMobileMenu = styled.nav`
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
-    }
+`
+
+//
+// MobileMenu
+//
+
+const MobileMenu = styled.nav`
+
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
@@ -44,6 +31,9 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     z-index: 999;
     background-color: ${theme.colors.burgerMenu};
     display: none;
+    max-height: 812px;
+    min-width: 312px;
+    width: 100%;
     
     ${props => props.isOpen && css <{isOpen: boolean}>`
         display: flex;
@@ -118,6 +108,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `
 
 const MobileFrapper = styled.div`
+    
      span a {
          position: fixed;
          display: block;
@@ -126,16 +117,33 @@ const MobileFrapper = styled.div`
          top: 19px;
          left: 20px;
     }
+    ${Button} {
+        @media ${theme.media.tablet} {
+            display: block;
+        }
+    }
 `
 
-const Link = styled.a`
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 130%;
-    text-align: center;
+//
+// DesktopMenu
+//
+
+const DesktopMenu = styled.nav`
+    padding: 0 20px;
+    flex: 1;
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
 `
 
-const ListItem = styled.li`
-
-`
+export const S = {
+    Link,
+    MenuItem,
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+    MobileFrapper,
+    DesktopMenu
+}

@@ -4,6 +4,7 @@ import photo2 from '../../../assets/images/bg-image1.webp';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
@@ -37,10 +38,11 @@ const StyledMain = styled.section`
 
 const SectionMainContent = styled.div`
     padding-top: 175px;
-    //height: 100%;
     z-index: 1;
+    
     @media ${theme.media.mobile} {
-        padding-top: 50px;
+        padding: 50px 20px;
+        height: 520px;
     }
 `
 /*const PhotoWrapper = styled.div`
@@ -69,16 +71,7 @@ const PhotoWrapper = styled.div`
     top: 0;
     opacity: 0.85;
     z-index: 0;
-    //max-width: 721px;
-    //width: 100%;
-    //max-height: 743px;
-    // background-image: url(${photo2});
-    // background-position:center;
-    // background-repeat: no-repeat;
-    // background-size:cover;
-    //max-width: 721px;
-    //width: 100%;
-    //min-height: 743px;
+    
     @media ${theme.media.mobile} {
         left: 0;
         position: relative;
@@ -95,26 +88,23 @@ const Photo = styled.img`
     object-position: center;
     
     @media ${theme.media.mobile} {
-        width: 375px;
-        height: 450px;
+        max-width: 576px;
+        height: 594px;
     }
 `
 
-
 const MainTitle = styled.h1`
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 36px;
-    color: ${theme.colors.accent};
-    width: 404px;
+    ${font({weight:400, color: theme.colors.accent, lineHeight: 1.8, Fmin: 18, Fmax: 20})};
+    //font-size: 20px;
+    //font-weight: 400;
+    //line-height: 36px;
+    //color: ${theme.colors.accent};
+    max-width: 404px;
 `
 
-const Name = styled.p`
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 108px;
+const Name = styled.h2`
+    ${font({weight:700, color: theme.colors.font, lineHeight: 1.35, Fmin: 50, Fmax: 80})};
     letter-spacing: -1px;
     text-align: left;
-    color: ${theme.colors.font};
 
 `

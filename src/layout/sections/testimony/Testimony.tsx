@@ -4,15 +4,18 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {SectionText} from "../../../components/SectionText";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
-            <SectionTitle>Testimony</SectionTitle>
-            <SectionText>Comment about me</SectionText>
-            <FlexWrapper direction={"column"} align={"center"}>
-                <Slider/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
+                <SectionText>Comment about me</SectionText>
+                <FlexWrapper direction={"column"} align={"center"}>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledTestimony>
     );
 };

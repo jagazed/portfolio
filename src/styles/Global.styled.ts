@@ -40,6 +40,10 @@ export const GlobalStyled = createGlobalStyle`
     
     section {
         padding: 100px 0;
+        
+        @media ${theme.media.mobile} {
+            padding: 40px 0;
+        }
     }
     
     section:nth-of-type(1){
@@ -62,6 +66,9 @@ export const GlobalStyled = createGlobalStyle`
         margin: 15px 0;
         font-size: 28px;
         font-weight: 500;
+        @media ${theme.media.mobile} {
+            margin: 10px 0 7px;
+        }
     }
     
     p {
