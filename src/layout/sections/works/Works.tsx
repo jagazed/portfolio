@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {SectionText} from "../../../components/SectionText";
 import {TabMenu} from "./tabMenu/TabMenu";
@@ -12,73 +11,80 @@ import project4Image from '../../../assets/images/Project-4.webp'
 import project5Image from '../../../assets/images/Project-5.webp'
 import project6Image from '../../../assets/images/Project-6.webp'
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Works_Styles";
 
 const worksItems = ["All", "Landing page", "React", "Spa"]
-export const Works = () => {
+
+const workData = [
+    {
+        title: "My first react project",
+        src: project1Image,
+        text: "This is sample project description random things are here in description This is sample project lorem" +
+            " ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+    {
+        title: "It-incubator training started with this project",
+        src: project2Image,
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+    {
+        title: "Project Tile goes here",
+        src: project3Image,
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+    {
+        title: "Project Tile goes here",
+        src: project4Image,
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+    {
+        title: "Project Tile goes here",
+        src: project5Image,
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+    {
+        title: "Project Tile goes here",
+        src: project6Image,
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        stack: "HTML, JavaScript, React",
+        linkPreview: "http://localhost:3000/",
+        linkCode: "http://localhost:3000/"
+    },
+]
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu menuItems={worksItems}/>
                 <FlexWrapper justify={"space-around"} wrap={"wrap"} align={"flex-start"}>
-                    <Work title={"My first react project"}
-                          src={project1Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkLivePreview={"#"}
-                          linkViewCode={"#"}/>
-                    <Work title={"It-incubator training started with this project"}
-                          src={project2Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkViewCode={"#"}
-                          linkLivePreview={"#"}/>
-                    <Work title={"Project Tile goes here"}
-                          src={project3Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkViewCode={"#"}
-                          linkLivePreview={"#"}/>
-                    <Work title={"Project Tile goes here"}
-                          src={project4Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkViewCode={"#"}
-                          linkLivePreview={"#"}/>
-                    <Work title={"Project Tile goes here"}
-                          src={project5Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkViewCode={"#"}
-                          linkLivePreview={"#"}/>
-                    <Work title={"Project Tile goes here"}
-                          src={project6Image}
-                          text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                          stack={"HTML, JavaScript, React"}
-                          linkViewCode={"#"}
-                          linkLivePreview={"#"}/>
+                    {workData.map((w, index)=> {
+                        return <Work title={w.title} key={index}
+                                     src={w.src}
+                                     text={w.text}
+                                     stack={w.stack}
+                                     linkLivePreview={w.linkPreview}
+                                     linkViewCode={w.linkCode}/>
+                    })}
                 </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
 
-const StyledWorks = styled.section`
-    
-    @media screen and (max-width: 800px) {
-        ${Container} {
-            padding: 0 5px;
-        }
-        ${FlexWrapper} {
-            gap: 6px;
-        }
-    }
-    
-    @media ${theme.media.mobile} {
-        ${Container} {
-            padding: 0;
-        }
-    }
-`

@@ -1,25 +1,40 @@
 import React from 'react';
 import styled from "styled-components";
-import { Icon } from '../icon/Icon';
+import {Icon} from '../icon/Icon';
 
-export const SocialLinks = () => {
+
+const socialItemData = [
+    {
+        href: "#",
+        iconId: "iconDribble"
+    },
+    {
+        href: "#",
+        iconId: "iconUpwork"
+    },
+    {
+        href: "#",
+        iconId: "iconYoutube"
+    },
+    {
+        href: "#",
+        iconId: "iconLinkedin"
+    },
+    {
+        href: "#",
+        iconId: "iconGithubSocialLink"
+    }
+]
+export const SocialLinks: React.FC = () => {
     return (
         <StyledSocialLinks>
-            <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconDribble'}/></SocialLink>
-            </SociaItem>
-            <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconUpwork'}/></SocialLink>
-            </SociaItem>
-            <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconYoutube'}/></SocialLink>
-            </SociaItem>
-            <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconLinkedin'}/></SocialLink>
-            </SociaItem>
-            <SociaItem>
-                <SocialLink href=""><Icon iconId={'iconGithubSocialLink'}/></SocialLink>
-            </SociaItem>
+            {socialItemData.map((s, index)=> {
+                return (
+                    <SociaItem key={index}>
+                        <SocialLink href={s.href}><Icon iconId={s.iconId}/></SocialLink>
+                    </SociaItem>
+                )
+            })}
         </StyledSocialLinks>
     );
 };
