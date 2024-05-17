@@ -8,10 +8,10 @@ import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from './Header_Styles'
 
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Testimony"]
+const items = ["Home", "Tech Stack", "Projects", "Testimony"]
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 768;
+    const breakpoint = 769;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)

@@ -1,24 +1,42 @@
 import styled from "styled-components";
-import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import iconArrow from "../../../assets/images/arrow-icon.svg";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Contacts = styled.section`
-    ${Container} {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 80px;
+
+    @media screen and (max-width: 980px) {
+        ${FlexWrapper} {
+            justify-content: center;
+        }
     }
 `
 
 const ContactsArea = styled.div`
-    color: ${theme.colors.link};
+    max-width: 450px;
+    width: 100%;
+    padding-bottom: 20px;
     h2 {
         font-size: 100px;
         font-weight: 700;
         text-align: left;
         text-transform: capitalize;
+        color: ${theme.colors.link};
+        padding-bottom: 25px;
+    }
+
+    @media screen and (max-width: 980px) {
+        max-width: 500px;
+        h2 {
+            font-size: 80px;
+            padding-bottom: 15px;
+        }
+        margin-left: 0;
+    }
+    @media ${theme.media.mobile} {
+        h2 {
+            font-size: 70px;
+        }
     }
 `
 
@@ -45,7 +63,7 @@ const Form = styled.form`
         height: 36px;
         padding: 0;
         background-color: unset;
-        color: #676CDB;
+        color: ${theme.colors.linkHover};
         text-align: left;
         position: relative;
         margin: 20px 0 10px;
@@ -58,6 +76,23 @@ const Form = styled.form`
             height: 30px;
             position: absolute;
             right: 0;
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        button {
+            width: 127px;
+            height: 34px;
+            font-size: 28px;
+        }
+    }
+
+    @media ${theme.media.mobile} {
+        button {
+            width: 107px;
+            height: 28px;
+            font-size: 22px;
+            margin-top: 15px;
         }
     }
 `
@@ -76,6 +111,14 @@ const Field = styled.input`
     &:focus-visible {
         outline: none;
         border-bottom: 1px solid ${theme.colors.accent};
+    }
+    
+    @media ${theme.media.tablet} {
+        font-size: 28px;
+    }
+
+    @media ${theme.media.mobile} {
+        font-size: 22px;
     }
 `
 

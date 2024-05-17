@@ -136,6 +136,7 @@ const DesktopMenu = styled.nav`
         gap: 30px;
         justify-content: center;
     }
+    white-space: nowrap;
 `
 
 export const S = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from '../icon/Icon';
+import {theme} from "../../styles/Theme";
 
 
 const socialItemData = [
@@ -44,6 +45,10 @@ const StyledSocialLinks = styled.ul`
     display: flex;
     gap: 50px;
     height: 25px;
+    
+    @media ${theme.media.mobile} {
+        gap: 25px;
+    }
 `
 
 const SociaItem = styled.li`

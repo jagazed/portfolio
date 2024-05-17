@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
     return (
         <S.Footer>
             <Container>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper justify={"space-between"} wrap={"wrap"}>
                     <FooterMenu menuItems={itemsFooter}/>
                     <S.Copyright>© 2024 Vasiliy Zelyanko, All Rights Reserved.</S.Copyright>
                 </FlexWrapper>
