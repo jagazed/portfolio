@@ -1,15 +1,23 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme";
 
+export type TabsStatusType = "all" | "landing" | "react" | "spa"
 
-export const TabMenu = (props: {menuItems: Array<string>}) => {
+
+type TabMenuPropsType = {
+    tabsItems: Array<{ status: TabsStatusType, title: string }>
+    changeFilterStatus: (value: TabsStatusType) => void
+    currentFilterStarus: string
+}
+
+export const TabMenu = (props: TabMenuPropsType) => {
     return (
         <StyledTabMenu>
             <ul>
-                {props.menuItems.map((item, index) => {
+                {props.tabsItems.map((item, index) => {
                     return <ListItem key={index}>
-                    <Link href="">{item}</Link>
+                    <Link active={props.currentFilterStarus === item.status} as={"button"} onClick={()=>{props.changeFilterStatus(item.status)}}>{item.title}</Link>
                     </ListItem>
                 })}
             </ul>
@@ -32,7 +40,7 @@ const ListItem = styled.li`
     
 `
 
-const Link = styled.a`
+const Link = styled.a<{active?: boolean}>`
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 1px;
@@ -57,5 +65,9 @@ const Link = styled.a`
         left: 0;
         right: 0;
         z-index: -1;
+        
+        ${props => props.active && css<{active?: boolean}>`
+            height: 10px;
+        `}
     }
 `
