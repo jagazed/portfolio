@@ -5,10 +5,10 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 
 const Footer = styled.footer`
     background-color: ${theme.colors.sectionLine};
-    
     ${Container} {
         border-top: 1px solid ${theme.colors.footerLine};
-        padding: 30px 0 50px 0;
+        padding: 25px 0 50px 0;
+        
     }
     
     @media screen and (max-width: 980px) {
@@ -19,7 +19,7 @@ const Footer = styled.footer`
 `
 
 const Copyright = styled.small`
-    padding-top: 15px;
+    padding-top: 20px;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;

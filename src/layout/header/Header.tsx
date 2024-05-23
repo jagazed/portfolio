@@ -1,9 +1,6 @@
 import React from 'react';
-import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
-import {FlexWrapper} from "../../components/FlexWrapper";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
-import {Button} from "../../components/Button";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from './Header_Styles'
 
@@ -24,14 +21,7 @@ export const Header: React.FC = () => {
     return (
         <S.Header>
             <Container>
-                <FlexWrapper justify={"space-between"} align={"center"}>
-                    <span><Logo/></span>
-
-                    {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesktopMenu menuItems={items}/>}
-                    {/*<DesktopMenu menuItems={items}/>*/}
-                    {/*<MobileMenu menuItems={items}/>*/}
-                    <Button>Contact Me</Button>
-                </FlexWrapper>
+                {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesktopMenu menuItems={items}/>}
             </Container>
         </S.Header>
     );

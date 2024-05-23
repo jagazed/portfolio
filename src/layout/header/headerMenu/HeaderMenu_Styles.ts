@@ -1,6 +1,5 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {Button} from "../../../components/Button";
 
 const Link = styled.a`
     font-family: 'DM Sans', sans-serif;
@@ -31,7 +30,7 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     z-index: 999;
     background-color: ${theme.colors.burgerMenu};
     display: none;
-    max-height: 812px;
+    //max-height: 812px;
     min-width: 312px;
     width: 100%;
     
@@ -109,18 +108,13 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 
 const MobileFrapper = styled.div`
     
-     span a {
+     a.Logo {
          position: fixed;
          display: block;
          width: 93px;
          height: 65px;
          top: 19px;
          left: 20px;
-    }
-    ${Button} {
-        @media ${theme.media.tablet} {
-            display: block;
-        }
     }
 `
 

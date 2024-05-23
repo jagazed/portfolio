@@ -10,7 +10,7 @@ export const Main: React.FC = () => {
             <Container>
                 <FlexWrapper wrap={"wrap-reverse"}>
                     <S.SectionMainContent>
-                        <S.SmallText>Hello! <br /> I’m Vasiliy Zelenko</S.SmallText>
+                        <S.SmallText>Hello! <br /> I’m Vasiliy Zelyanko</S.SmallText>
                         <S.MainTitle>I’am freelance web developer based in Indonesia who loves to craft attractive design experiences
                             for the web.</S.MainTitle>
                     </S.SectionMainContent>

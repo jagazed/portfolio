@@ -81,10 +81,9 @@ const MainTitle = styled.h1`
 `
 
 const SmallText = styled.h2`
-    ${font({weight:700, color: theme.colors.font, lineHeight: 1.35, Fmin: 50, Fmax: 80})};
+    ${font({family: '"Playfair Display", serif', weight:700, color: theme.colors.font, lineHeight: 1.35, Fmin: 50, Fmax: 90})};
     letter-spacing: -1px;
     text-align: left;
-
 `
 
 export const S = {

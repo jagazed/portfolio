@@ -18,7 +18,7 @@ export const FooterMenu = (props: {menuItems: Array<string>}) => {
 
 const StyledFooterMenu = styled.nav`
     white-space: nowrap;
-    padding: 15px 10px 0 0;
+    padding: 20px 10px 0 0;
     ul {
         display: flex;
         flex-direction: row;

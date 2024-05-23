@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import {theme} from "../../styles/Theme";
-import {Button} from "../../components/Button";
 
 const Header = styled.header`
     background: transparent;
@@ -11,17 +9,6 @@ const Header = styled.header`
     right: 0;
     z-index: 99999;
     margin-top: 9px;
-    
-    span a:first-of-type {
-        @media ${theme.media.tablet} {
-            display: none;
-        }
-    }
-    ${Button} {
-        @media ${theme.media.tablet} {
-            display: none;
-        }
-    }
 `
 
 export const S = {
