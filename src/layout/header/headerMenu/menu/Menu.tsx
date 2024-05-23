@@ -1,5 +1,5 @@
 import React from 'react';
-import {S} from './../HeaderMenu_Styles';
+import {S} from '../HeaderMenu_Styles';
 
 export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
     return (
